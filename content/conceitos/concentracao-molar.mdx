@@ -1,0 +1,52 @@
+---
+{
+  "title": "Concentração Molar",
+  "slug": "concentracao-molar",
+  "materia": "Química Geral",
+  "materiaSlug": "quimica-geral",
+  "topico": "Estequiometria",
+  "topicoSlug": "estequiometria",
+  "keywords": ["concentração molar", "molaridade", "mol por litro", "mol/L", "solução", "quantidade de matéria"],
+  "related": ["mol-e-massa-molar", "solucoes", "balanceamento", "reagente-limitante"],
+  "miniResumo": "Quantidade de soluto (em mols) por volume de solução (em litros). A forma mais usada de expressar concentração em química.",
+  "variacoes": {
+    "simples": "Concentração molar é tipo: quantos mols de uma substância você tem num litro de solução. Pensa como uma receita — se você dissolve 1 mol de sal em 1 litro de água, você tem concentração 1 M (1 molar). Se coloca 2 mols, fica 2 M — o dobro mais concentrado.",
+    "intuicao": "**Pensa assim:** concentração molar é a 'densidade de partículas' de uma solução.\n\n$$c = \\frac{n}{V}$$\n\n- $n$ = quantidade de soluto em **mols**\n- $V$ = volume da solução em **litros**\n- $c$ = concentração em **mol/L** (também escrito como **M**)\n\nÉ a medida mais útil da química porque mols conectam você direto com equações químicas — 1 mol de HCl reage com 1 mol de NaOH, independente de massa.",
+    "profundo": "A molaridade (concentração molar em mol/L) é uma das formas de concentração usadas em química, mas existem outras importantes:\n\n| Expressão | Símbolo | Unidade | Quando usar |\n|-----------|---------|---------|-------------|\n| Molaridade | M ou c | mol/L | Reações em solução |\n| Molalidade | m | mol/kg solvente | Propriedades coligativas |\n| Fração molar | x | adimensional | Termodinâmica, VLE |\n| Normalidade | N | eq/L | Titulações ácido-base |\n\n**Atenção:** molaridade depende de temperatura (o volume muda). Molalidade não — por isso é mais rigorosa em físico-química.\n\n**Conversão molaridade ↔ fração molar:**\n$$x_A = \\frac{c_A}{c_A + c_B + \\ldots} = \\frac{c_A}{c_{total}}$$",
+    "resumo": "- **Fórmula:** $c = n/V$ [mol/L = M]\n- **Preparo:** pesar $n = c \\times V$ mols, dissolver e completar o volume\n- **Diluição:** $c_1 V_1 = c_2 V_2$\n- **Reação:** usar a relação estequiométrica + $n = c \\times V$\n- **Cuidado:** molaridade muda com temperatura; use frascos volumétricos para precisão"
+  },
+  "matematica": "### Cálculo de concentração — passo a passo\n\n**Caso 1: preparar solução a partir de massa**\n\nQuero 500 mL de NaOH 0,1 M. Quanto pesar?\n$$n = c \\times V = 0{,}1 \\times 0{,}5 = 0{,}05 \\text{ mol}$$\n$$m = n \\times M_{molar} = 0{,}05 \\times 40 = \\boxed{2{,}0 \\text{ g}}$$\n\n**Caso 2: diluição**\n\n$$c_1 V_1 = c_2 V_2$$\n\nQuero 1 L de HCl 0,5 M a partir de HCl 12 M:\n$$V_1 = \\frac{c_2 V_2}{c_1} = \\frac{0{,}5 \\times 1}{12} = \\boxed{41{,}7 \\text{ mL}}$$\n\nTransferir 41,7 mL do concentrado para balão volumétrico e completar para 1 L.",
+  "exemploResolvido": "**Problema:** 200 mL de solução de NaCl tem 2,34 g de NaCl. Qual a concentração molar? (M NaCl = 58,5 g/mol)\n\n**Passo 1:** calcular mols\n$$n = \\frac{m}{M} = \\frac{2{,}34}{58{,}5} = 0{,}04 \\text{ mol}$$\n\n**Passo 2:** concentração\n$$c = \\frac{n}{V} = \\frac{0{,}04}{0{,}200} = \\boxed{0{,}20 \\text{ mol/L} = 0{,}20 \\text{ M}}$$",
+  "aplicacao": [
+    {
+      "tipo": "prova",
+      "descricao": "Cálculo de concentração após diluição, mistura de soluções, reação entre volumes de soluções, e estequiometria em solução."
+    },
+    {
+      "tipo": "laboratorio",
+      "descricao": "Preparo de soluções padrão, titulações (é preciso saber a concentração exata do titulante), espectrofotometria (curva de calibração)."
+    },
+    {
+      "tipo": "industria",
+      "descricao": "Controle de processo (concentração de reagentes, produto), formulação de produtos (medicamentos, alimentos), tratamento de efluentes."
+    }
+  ],
+  "exercicios": [
+    {
+      "enunciado": "Calcule a concentração molar de uma solução preparada com 5,85 g de NaCl (M = 58,5 g/mol) em 500 mL de solução.",
+      "solucao": "$$n = \\frac{5{,}85}{58{,}5} = 0{,}1 \\text{ mol}$$\n$$c = \\frac{0{,}1}{0{,}5 \\text{ L}} = \\boxed{0{,}2 \\text{ M}}$$",
+      "nivel": "iniciante"
+    },
+    {
+      "enunciado": "Para preparar 2 L de solução de H₂SO₄ 0,25 M a partir de uma solução concentrada de 18 M, qual volume do concentrado deve ser usado?",
+      "solucao": "$$c_1 V_1 = c_2 V_2$$\n$$V_1 = \\frac{0{,}25 \\times 2}{18} = \\frac{0{,}5}{18} = \\boxed{0{,}0278 \\text{ L} = 27{,}8 \\text{ mL}}$$\nTransferir 27,8 mL para balão volumétrico de 2 L e completar com água (sempre ácido na água!).",
+      "nivel": "intermediario"
+    },
+    {
+      "enunciado": "Mistura-se 300 mL de HCl 0,4 M com 200 mL de HCl 0,6 M. Qual a concentração final? Depois, 150 mL dessa mistura reage com excesso de NaOH. Quantos mmol de NaOH são consumidos?",
+      "solucao": "**Parte 1 — mistura:**\n$$n_{total} = c_1V_1 + c_2V_2 = 0{,}4\\times0{,}3 + 0{,}6\\times0{,}2 = 0{,}12 + 0{,}12 = 0{,}24 \\text{ mol}$$\n$$V_{total} = 0{,}5 \\text{ L}$$\n$$c_{final} = \\frac{0{,}24}{0{,}5} = 0{,}48 \\text{ M}$$\n\n**Parte 2 — reação com NaOH:**\n$$n_{HCl} = 0{,}48 \\times 0{,}15 = 0{,}072 \\text{ mol} = \\boxed{72 \\text{ mmol de NaOH}}$$\n(estequiometria 1:1 — HCl + NaOH → NaCl + H₂O)",
+      "nivel": "avancado"
+    }
+  ]
+}
+---

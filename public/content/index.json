@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "concentracao-molar",
+    "title": "Concentração Molar",
+    "materia": "Química Geral",
+    "materiaSlug": "quimica-geral",
+    "topico": "Estequiometria",
+    "topicoSlug": "estequiometria",
+    "keywords": [
+      "concentração molar",
+      "molaridade",
+      "mol por litro",
+      "mol/L",
+      "solução",
+      "quantidade de matéria"
+    ],
+    "related": [
+      "mol-e-massa-molar",
+      "solucoes",
+      "balanceamento",
+      "reagente-limitante"
+    ],
+    "miniResumo": "Quantidade de soluto (em mols) por volume de solução (em litros). A forma mais usada de expressar concentração em química."
+  },
+  {
+    "slug": "difusao",
+    "title": "Difusão Molecular",
+    "materia": "Fenômenos de Transporte",
+    "materiaSlug": "fenomenos-transporte",
+    "topico": "Transferência de Massa",
+    "topicoSlug": "transferencia-massa",
+    "keywords": [
+      "difusão",
+      "difusão molecular",
+      "lei de Fick",
+      "coeficiente de difusão",
+      "gradiente de concentração",
+      "fluxo difusivo"
+    ],
+    "related": [
+      "lei-de-fick",
+      "numero-de-schmidt",
+      "conveccao-massica"
+    ],
+    "miniResumo": "Movimento espontâneo de moléculas de regiões de maior para menor concentração, sem precisar de energia externa."
+  },
+  {
+    "slug": "lei-de-fick",
+    "title": "Lei de Fick",
+    "materia": "Fenômenos de Transporte",
+    "materiaSlug": "fenomenos-transporte",
+    "topico": "Transferência de Massa",
+    "topicoSlug": "transferencia-massa",
+    "keywords": [
+      "lei de Fick",
+      "primeira lei de Fick",
+      "segunda lei de Fick",
+      "fluxo difusivo",
+      "gradiente de concentração"
+    ],
+    "related": [
+      "difusao",
+      "numero-de-schmidt",
+      "conveccao-massica"
+    ],
+    "miniResumo": "Equação que quantifica o fluxo difusivo: proporcional ao gradiente de concentração e ao coeficiente de difusão."
+  }
+]

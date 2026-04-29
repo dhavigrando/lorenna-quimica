@@ -1,0 +1,52 @@
+---
+{
+  "title": "Lei de Fick",
+  "slug": "lei-de-fick",
+  "materia": "Fenômenos de Transporte",
+  "materiaSlug": "fenomenos-transporte",
+  "topico": "Transferência de Massa",
+  "topicoSlug": "transferencia-massa",
+  "keywords": ["lei de Fick", "primeira lei de Fick", "segunda lei de Fick", "fluxo difusivo", "gradiente de concentração"],
+  "related": ["difusao", "numero-de-schmidt", "conveccao-massica"],
+  "miniResumo": "Equação que quantifica o fluxo difusivo: proporcional ao gradiente de concentração e ao coeficiente de difusão.",
+  "variacoes": {
+    "simples": "A Lei de Fick é basicamente a fórmula que calcula quanto material atravessa uma superfície por difusão. É simples: quanto maior a diferença de concentração, mais rápido as coisas se movem. E cada substância tem um coeficiente próprio (D) que diz quão facilmente ela se difunde.",
+    "intuicao": "**Pensa assim:** a Lei de Fick é para difusão o que a Lei de Ohm é para eletricidade.\n\n- Ohm: corrente = voltagem / resistência\n- Fick: fluxo = D × gradiente de concentração\n\n**1ª Lei de Fick** (estado estacionário — quando nada muda com o tempo):\n$$J = -D \\frac{dc}{dz}$$\n\nUso: quando você quer saber o fluxo numa situação que já estabilizou.\n\n**2ª Lei de Fick** (transiente — quando a concentração está mudando):\n$$\\frac{\\partial c}{\\partial t} = D \\frac{\\partial^2 c}{\\partial z^2}$$\n\nUso: quando você quer saber como a concentração evolui com o tempo.",
+    "profundo": "**1ª Lei de Fick** é uma lei constitutiva (fenomenológica), válida para sistemas com gradiente de concentração moderado:\n$$\\vec{J}_A = -D_{AB} \\nabla c_A$$\n\n**2ª Lei de Fick** é derivada da 1ª + equação da continuidade para espécie A:\n$$\\frac{\\partial c_A}{\\partial t} + \\nabla \\cdot \\vec{N}_A = R_A$$\n\nPara $D$ constante, sem reação ($R_A = 0$) e sem convecção:\n$$\\frac{\\partial c_A}{\\partial t} = D_{AB} \\nabla^2 c_A$$\n\n**Soluções clássicas da 2ª Lei:**\n- Geometria semi-infinita: $c(z,t) = c_0 \\cdot \\text{erfc}\\left(\\frac{z}{2\\sqrt{Dt}}\\right)$\n- Geometria finita: série de Fourier-Bessel\n- Análise dimensional: grupo $\\xi = z/\\sqrt{Dt}$ (número de Fourier de massa)",
+    "resumo": "- **1ª Lei (estacionário):** $J = -D\\,dc/dz$ — fluxo constante no tempo\n- **2ª Lei (transiente):** $\\partial c/\\partial t = D\\,\\partial^2c/\\partial z^2$ — concentração evolui\n- **D:** coeficiente de difusão [m²/s], característica do par A-B\n- **Analogias:** Fourier (calor), Ohm (elétrico)\n- **Aplicar quando:** transporte dominado por difusão, sem convecção significativa"
+  },
+  "matematica": "### Como usar a 1ª Lei de Fick na prática\n\n**1D, estado estacionário, geometria plana:**\n\nO perfil de concentração é linear: $c(z) = c_1 - (c_1 - c_2)\\frac{z}{L}$\n\nO fluxo é:\n$$J = D_{AB}\\frac{c_1 - c_2}{L}$$\n\n**Resistência à difusão** (analogia elétrica):\n$$J = \\frac{\\Delta c}{R_{dif}}, \\quad R_{dif} = \\frac{L}{D_{AB} A}$$\n\nResistências em série (ex: duas membranas):\n$$R_{total} = R_1 + R_2 = \\frac{L_1}{D_1 A} + \\frac{L_2}{D_2 A}$$",
+  "exemploResolvido": "**Problema (2ª Lei — penetração):** Uma chapa de aço inicialmente com $c_0 = 0{,}2\\%$ C em massa é exposta a uma atmosfera com $c_s = 1{,}0\\%$ C na superfície. Qual a concentração de carbono a 0,5 mm de profundidade após 4 horas? Dado $D = 2\\times10^{-11}$ m²/s.\n\n**Solução (semi-infinito):**\n$$\\frac{c(z,t) - c_0}{c_s - c_0} = \\text{erfc}\\left(\\frac{z}{2\\sqrt{Dt}}\\right)$$\n\nCalcule o argumento:\n$$\\frac{z}{2\\sqrt{Dt}} = \\frac{5\\times10^{-4}}{2\\sqrt{2\\times10^{-11}\\times14400}} = \\frac{5\\times10^{-4}}{2\\times5{,}37\\times10^{-4}} = 0{,}465$$\n\nDa tabela: $\\text{erfc}(0{,}465) \\approx 0{,}511$\n\n$$c = 0{,}2 + (1{,}0 - 0{,}2)\\times0{,}511 = 0{,}2 + 0{,}409 \\approx \\boxed{0{,}61\\%\\,C}$$",
+  "aplicacao": [
+    {
+      "tipo": "prova",
+      "descricao": "A 1ª Lei cai em problemas de fluxo estacionário por membranas e camadas. A 2ª Lei cai em cementação de aços e problemas transientes com erfc."
+    },
+    {
+      "tipo": "laboratorio",
+      "descricao": "Usada para calcular coeficientes de difusão experimentalmente: mede-se o fluxo e a diferença de concentração, e calcula-se D."
+    },
+    {
+      "tipo": "industria",
+      "descricao": "Cementação de aços, difusão em membranas de diálise, transporte de O₂ em catalisadores, secagem de filmes e polímeros."
+    }
+  ],
+  "exercicios": [
+    {
+      "enunciado": "Uma membrana de 2 mm tem concentrações de 100 e 10 mol/m³ nas duas faces. $D = 3\\times10^{-9}$ m²/s. Calcule o fluxo.",
+      "solucao": "$$J = D\\frac{\\Delta c}{L} = 3\\times10^{-9}\\times\\frac{90}{0{,}002} = 3\\times10^{-9}\\times45000 = \\boxed{1{,}35\\times10^{-4}\\text{ mol/m}^2\\text{s}}$$",
+      "nivel": "iniciante"
+    },
+    {
+      "enunciado": "Duas membranas em série: Membrana 1 ($L_1 = 1$ mm, $D_1 = 2\\times10^{-9}$ m²/s) e Membrana 2 ($L_2 = 2$ mm, $D_2 = 5\\times10^{-9}$ m²/s). Concentração: $c_0 = 200$ mol/m³ e $c_f = 0$. Calcule o fluxo.",
+      "solucao": "**Resistências:**\n$$R_1 = \\frac{L_1}{D_1} = \\frac{10^{-3}}{2\\times10^{-9}} = 5\\times10^5 \\text{ s/m}$$\n$$R_2 = \\frac{L_2}{D_2} = \\frac{2\\times10^{-3}}{5\\times10^{-9}} = 4\\times10^5 \\text{ s/m}$$\n$$R_{total} = 9\\times10^5 \\text{ s/m}$$\n\n$$J = \\frac{\\Delta c}{R_{total}} = \\frac{200}{9\\times10^5} = \\boxed{2{,}22\\times10^{-4}\\text{ mol/m}^2\\text{s}}$$",
+      "nivel": "intermediario"
+    },
+    {
+      "enunciado": "Por que a 2ª Lei de Fick tem a mesma forma matemática que a equação do calor de Fourier? O que isso implica sobre a solução de problemas de difusão?",
+      "solucao": "Ambas são equações de difusão parabólicas da forma $\\partial u/\\partial t = \\alpha\\,\\partial^2u/\\partial x^2$, onde $\\alpha$ é a difusividade (térmica ou mássica). A estrutura matemática idêntica significa que **todas as soluções de problemas de condução de calor são diretamente aplicáveis a problemas de difusão de massa**, bastando substituir temperatura por concentração e difusividade térmica por $D$. Isso inclui soluções para sólido semi-infinito (erfc), geometrias finitas (séries de Fourier), e analogias de circuito (resistências em série/paralelo).",
+      "nivel": "avancado"
+    }
+  ]
+}
+---

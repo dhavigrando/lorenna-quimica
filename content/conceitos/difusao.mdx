@@ -1,0 +1,52 @@
+---
+{
+  "title": "Difusão Molecular",
+  "slug": "difusao",
+  "materia": "Fenômenos de Transporte",
+  "materiaSlug": "fenomenos-transporte",
+  "topico": "Transferência de Massa",
+  "topicoSlug": "transferencia-massa",
+  "keywords": ["difusão", "difusão molecular", "lei de Fick", "coeficiente de difusão", "gradiente de concentração", "fluxo difusivo"],
+  "related": ["lei-de-fick", "numero-de-schmidt", "conveccao-massica"],
+  "miniResumo": "Movimento espontâneo de moléculas de regiões de maior para menor concentração, sem precisar de energia externa.",
+  "variacoes": {
+    "simples": "Difusão é tipo quando você pinga tinta na água: a tinta vai se espalhando sozinha até ficar igual por todo lado. Isso acontece porque as moléculas ficam em movimento constante e acabam indo parar em lugares onde tem menos delas. É basicamente o universo tentando deixar tudo bem distribuído.",
+    "intuicao": "**Pensa assim:** imagina que você tá numa festa e as pessoas chegam todas na entrada. Sem ninguém empurrar, elas naturalmente vão se espalhando pelo salão porque é mais confortável quando não tá todo mundo junto.\n\nCom moléculas é igual. Onde tem **muita concentração** = apertado, onde tem **pouca concentração** = folgado. As moléculas se movem aleatoriamente, mas estatisticamente *mais* moléculas saem do lugar apertado do que entram → resultado: espalham.\n\nIsso é **difusão**: transporte de massa pelo gradiente de concentração, sem energia externa.",
+    "profundo": "A difusão é descrita pela **teoria cinética dos gases** e pelo formalismo termodinâmico de processos irreversíveis.\n\n**Mecanismo microscópico:** cada molécula sofre colisões aleatórias (movimento browniano). O fluxo líquido surge porque a probabilidade de uma molécula cruzar um plano depende do número de moléculas de cada lado — maior concentração → maior fluxo de um lado para o outro.\n\n**Coeficiente de difusão** $D_{AB}$ depende de:\n- Temperatura ($D \\propto T^{3/2}$ para gases — Chapman-Enskog)\n- Viscosidade do meio\n- Tamanho das moléculas (correlação de Wilke-Chang para líquidos)\n\n**Analogia de Fick-Ohm-Fourier:** difusão de massa (Fick), condução elétrica (Ohm) e condução de calor (Fourier) têm a mesma estrutura matemática: fluxo = coeficiente × gradiente.",
+    "resumo": "- **Definição:** movimento de moléculas de alta para baixa concentração\n- **Força motriz:** gradiente de concentração $\\nabla c$\n- **Lei:** $J = -D \\nabla c$ (Lei de Fick)\n- **Coeficiente:** $D_{AB}$ [m²/s] — depende do par de substâncias e temperatura\n- **Quando usar:** qualquer problema de transporte de massa em regime difusivo"
+  },
+  "matematica": "### Lei de Fick (1ª Lei) — passo a passo\n\n**Grandezas:**\n- $J_A$ = fluxo molar da espécie A [mol/m²·s]\n- $D_{AB}$ = coeficiente de difusão de A em B [m²/s]\n- $c_A$ = concentração molar de A [mol/m³]\n- $z$ = direção do transporte [m]\n\n**A equação:**\n$$J_A = -D_{AB} \\frac{dc_A}{dz}$$\n\nO sinal negativo é porque o fluxo vai do maior pro menor (sentido oposto ao gradiente).\n\n**Caso 1D estacionário (mais comum em provas):**\n\nSe $D_{AB}$ é constante e a geometria é plana:\n$$J_A = D_{AB} \\frac{c_{A1} - c_{A2}}{\\Delta z}$$\n\nonde $c_{A1} > c_{A2}$ (difusão de 1 para 2) e $\\Delta z$ é a espessura da camada.",
+  "exemploResolvido": "**Problema:** Oxigênio (A) difunde através de uma camada de nitrogênio (B) estacionário de 2 mm de espessura. A concentração de O₂ de um lado é 0,08 mol/L e do outro 0,02 mol/L. O coeficiente de difusão é $D_{AB} = 1{,}8 \\times 10^{-5}$ m²/s a 25°C.\n\n**Calcule o fluxo de O₂.**\n\n**Solução:**\n\n1. Converta unidades para SI:\n   - $c_{A1} = 0{,}08 \\text{ mol/L} = 80 \\text{ mol/m}^3$\n   - $c_{A2} = 0{,}02 \\text{ mol/L} = 20 \\text{ mol/m}^3$\n   - $\\Delta z = 2 \\text{ mm} = 0{,}002 \\text{ m}$\n\n2. Aplique a Lei de Fick:\n$$J_A = D_{AB} \\frac{c_{A1} - c_{A2}}{\\Delta z}$$\n\n3. Substitua:\n$$J_A = 1{,}8 \\times 10^{-5} \\times \\frac{80 - 20}{0{,}002}$$\n\n$$J_A = 1{,}8 \\times 10^{-5} \\times 30000 = \\boxed{0{,}54 \\text{ mol/m}^2 \\cdot \\text{s}}$$",
+  "aplicacao": [
+    {
+      "tipo": "prova",
+      "descricao": "Cai muito em cálculo de fluxo por membrana, difusão em coluna de gases estagnados, e problemas com Lei de Fick 1D estacionário."
+    },
+    {
+      "tipo": "laboratorio",
+      "descricao": "Base da espectrofotometria (difusão de íons em solução), cromatografia (separação por coeficientes de difusão diferentes) e processos de dissolução."
+    },
+    {
+      "tipo": "industria",
+      "descricao": "Presente em membranas de separação, catálise heterogênea (difusão de reagentes nos poros do catalisador), secagem e absorção de gases."
+    }
+  ],
+  "exercicios": [
+    {
+      "enunciado": "CO₂ difunde através de uma membrana de borracha de 1,5 mm de espessura. As concentrações nas duas faces são 0,12 mol/L e 0,03 mol/L. Dado $D = 2,0 \\times 10^{-9}$ m²/s. Calcule o fluxo.",
+      "solucao": "**Dados:** $c_1 = 120$ mol/m³, $c_2 = 30$ mol/m³, $\\Delta z = 1{,}5 \\times 10^{-3}$ m\n\n$$J = D \\frac{c_1 - c_2}{\\Delta z} = 2{,}0\\times10^{-9} \\times \\frac{90}{1{,}5\\times10^{-3}}$$\n\n$$J = 2{,}0\\times10^{-9} \\times 60000 = \\boxed{1{,}2\\times10^{-4} \\text{ mol/m}^2\\text{s}}$$",
+      "nivel": "iniciante"
+    },
+    {
+      "enunciado": "Em um experimento, o fluxo de etanol através de uma membrana foi medido como $5 \\times 10^{-4}$ mol/m²·s. A espessura é 3 mm e a concentração na face de saída é praticamente zero. Determine a concentração na face de entrada. Dado $D_{etanol} = 1{,}2 \\times 10^{-9}$ m²/s.",
+      "solucao": "**Isolando $c_1$:**\n$$J = D \\frac{c_1 - 0}{\\Delta z} \\Rightarrow c_1 = \\frac{J \\cdot \\Delta z}{D}$$\n\n$$c_1 = \\frac{5\\times10^{-4} \\times 3\\times10^{-3}}{1{,}2\\times10^{-9}} = \\frac{1{,}5\\times10^{-6}}{1{,}2\\times10^{-9}}$$\n\n$$c_1 = \\boxed{1250 \\text{ mol/m}^3 = 1{,}25 \\text{ mol/L}}$$",
+      "nivel": "intermediario"
+    },
+    {
+      "enunciado": "Explique com base molecular por que o coeficiente de difusão de gases aumenta com temperatura, mas em líquidos também aumenta com temperatura porém por razão diferente. O que controla $D$ em cada fase?",
+      "solucao": "**Gases:** $D$ é controlado pelo livre caminho médio e velocidade média das moléculas. Pela teoria de Chapman-Enskog: $D \\propto T^{3/2}/P$. Com mais temperatura, moléculas se movem mais rápido → colidem menos vezes por unidade de distância → difundem mais rápido.\n\n**Líquidos:** $D$ é controlado pela viscosidade. Pela equação de Stokes-Einstein: $D = k_B T / (6\\pi\\mu r)$. Com temperatura, a viscosidade $\\mu$ cai muito (líquido 'fica mais fluido'), e essa queda domina sobre o aumento direto de T — por isso $D$ também sobe, mas pelo mecanismo de redução da resistência ao movimento, e não pelo aumento de velocidade molecular.",
+      "nivel": "avancado"
+    }
+  ]
+}
+---
